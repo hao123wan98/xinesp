@@ -1,0 +1,138 @@
+body{
+    background-color: var(--bg-color12);
+}
+*body{margin:0;padding:0;-webkit-text-size-adjust:none;}
+img{border:0;vertical-align:bottom;}
+ul{list-style: none;}
+#head{height: 98px;width: 1200px;margin: auto;position: relative;}
+#head h1{font-size: 0;}
+.box{width: 100%;min-width: 1200px;border-bottom: 1px solid rgba(126,82,83,0.6);}
+.head-img{margin-top: 20px;float: left;}
+.head-ul{position: absolute;bottom: 18px;left: 200px;}
+.head-ul li{float: left;margin: 63px 30px 0;font-size: 16px;font-weight: bold;}
+#products:hover #product{display: block;}
+.head-ul li a,a:link{color: var(--font-color5);font-size: 16px;}
+.head-ul li a:hover{color: var(--font-color2);}
+.head-btn{position: absolute;bottom: 18px;right: 0;}
+
+#products:hover #product{display: block;}
+#product{position: absolute;z-index: 999;left: 180px;display: none;padding-top: 18px;}
+#product p{width: 100px;height: 45px;text-align: center;line-height: 45px;color:#484646;font-size: 16px;background-color: rgba(185,173,181,0.2)}
+#product p:first-of-type{border-bottom: 1px solid rgba(126,82,83,0.6)}
+#product p:hover{font-weight: bold}
+#login{background: #5c4973;color: white;}
+a{
+    color:#000000;
+}
+.main{
+    width: 1200px;
+    min-height: 400px;
+    margin: auto;
+    position: relative;
+
+}
+.login-panel{
+    width: 330px;
+    min-height:400px;
+    position: absolute;
+    right: 175px;
+    top:60px;
+}
+.input-group{
+    padding-top: 60px;
+    width:100%;
+    height: 300px;
+}
+.input-div{
+    width: 300px;
+    height: 40px;
+    margin:5px auto;
+    position: relative;
+}
+.input-div input{
+
+    font-size: 14px;
+    padding-left: 10px;
+    width: 100%;
+    height: 40px;
+    border:none;
+    color:var(--font-color5);
+    /*padding-bottom: 5px;
+    border-bottom: 1px solid red;*/
+    line-height: 40px;
+    background-color: transparent;
+    border-bottom: solid 1px var(--border-color7);
+}
+.input-div input:focus{
+    border-bottom: solid 1px var(--border-color1);
+}
+
+.input-div1{
+    width: 300px;
+    height: 25px;
+    margin:5px auto;
+    position: relative;
+}
+.input-div1 input{
+    margin-right: 4px;
+}
+.input-div1 span,.input-div1 a{
+    color:var(--font-color5);
+}
+
+#login-btn{
+    display: block;
+    width: 300px;
+    margin:50px  auto;
+    text-align: center;
+}
+
+#reg-btn{
+    display: block;
+    width: 300px;
+    margin:50px  auto;
+}
+#back-btn{
+    display: block;
+    width: 100px;
+    margin:50px  auto;
+    position: absolute;
+    left: 20px;
+}
+
+#forgot-btn{
+    display: block;
+    width: 100px;
+    margin:50px  auto;
+    position: absolute;
+    right: 20px;
+}
+.code{
+    display: block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border: solid 1px var(--border-color7);
+    position: absolute;
+    right: 1px;
+    bottom: 10px;
+    text-align: center;
+    font-size: 12px;
+    color:var(--font-color5);
+}
+.tel-p{position: absolute;right:0px;bottom: 5px;display: none; font-size: 12px;}
+#telcode-btn{
+    position: absolute;
+    right: 1px;
+    bottom: 5px;
+    width: 100px;
+    border: solid 1px var(--border-color7);
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color:var(--font-color5);
+    text-align: center;
+}
+.code-error{ position: absolute;right:120px;bottom: 5px;width: 80px;height: 25px;display: none;  font-size: 12px;}
+.telCodeError{position: absolute;right: 120px;bottom: 5px;width: 80px;height: 25px;display: none; font-size: 12px;}
+.hint{position: absolute;bottom: 13px;right: 1px;color:var(--font-color2);display: none; font-size: 12px;}
