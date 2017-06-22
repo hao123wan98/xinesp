@@ -1,0 +1,29 @@
+#first-select{
+    width: 100%;
+    height: auto;
+}
+#first-select .img{
+    width: 250px;
+    height: 150px;
+    background: url("/public/images/pic-icon-2.png") no-repeat center;
+    margin: 20px auto;
+    padding: 0;
+
+}
+#first-select .desc{
+    height: 60px;
+    line-height: 30px;
+    width: 460px;
+    font-size: 14px;
+    margin: 0 auto;
+}
+#first-select .line-btn{
+    width: 100%;
+    margin-top: 20px;
+    padding: 0;
+    text-align: center;
+}
+#first-select .btn{
+    width: 156px;
+    margin: 0 10px;
+}

@@ -1,0 +1,27 @@
+<style>
+    .zeromodal-container {
+        background-color: #f9f9f9;
+    }
+
+    .width6 {
+        width: 100px;
+    }
+</style>
+<h4 style="color:red;"><span><%= title %> </span></h4>
+
+<div style="background-color: #ccc;height: 1px;width: 100%;margin-top: 20px; margin-bottom: 20px;"></div>
+<div>
+    <div class="form-control btn green" style="width: 100px;margin-left:50px;"
+         onclick="alertViewOk('<%= id %>','<%= targetId %>')"> 确定
+    </div>
+    <div class="form-control btn btn-default" style="width: 100px;margin-left:50px;"
+         onclick="cancel()"> 取消
+    </div>
+</div>
+
+<script>
+    function cancel() {
+        zeroModal.closeAll();
+    }
+
+</script>
