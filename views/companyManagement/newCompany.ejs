@@ -1,0 +1,349 @@
+<!--新建企业-->
+<div class="clientInfo">
+    <div class="info-body" id="info-body">
+        <div class="row " style="width:100%;padding:10px 30px;">
+            <div class="portlet light bordered col-md-6 col-lg-6" style="background-color:#fafafa;">
+                <div class="portlet-title">
+                    <div class="caption font-red-sunglo">
+                        <i class="icon-settings font-red-sunglo"></i>
+                        <span class="caption-subject bold uppercase">  企业信息</span>
+                    </div>
+                </div>
+                <div class="portlet-body form">
+                    <form role="form">
+                        <div class="form-body">
+                            <div id="searchRegisterMobileGroup" class="form-group">
+                                <label>客户注册手机</label>
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <input id="searchRegisterMobile" class="form-control spinner" type="text"
+                                               placeholder="请输入注册手机号"/>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button type="button" class="btn  btn-danger "
+                                                onclick="searchCompanyByMobile()"
+                                                style="font-size: 16px;padding: 5px 30px;">查找
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <img src="../../public/images/required_icon.png" alt=""/>
+                                <label>企业全称</label>
+                                <div class="row">
+                                    <div class="col-md-9">
+                                        <input id="companyFullName" class="form-control spinner" type="text"
+                                               placeholder="请输入企业全称"/>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <button id="searchCompanyBtn" type="button" class="btn  btn-danger "
+                                                onclick="searchCompany()"
+                                                style="font-size: 16px;padding: 5px 30px;">查找
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <img src="../../public/images/required_icon.png" alt=""/>
+                                <label>企业简称</label>
+                                <input id="companyShortName" class="form-control spinner" type="text"
+                                       placeholder="请输入企业简称"/></div>
+                            <div class="form-group">
+                                <label>企业logo</label>
+                                <img width="100px" height="100px" src=""
+                                     onerror="this.src='/public/images/upload-img.jpg'" onclick="uploadLogo()"
+                                     id="companyLogo"/>
+                                <div id="logo-tips">
+                                    <div id="logo-tips-text">提示:图片小于2M,120px X 120px</div>
+                                    <div id="logo-hit"></div>
+                                </div>
+                                <!--accept="image/jpg"-->
+                                <input type="file" style="display: none" id="logoFile" onchange="fileSelcetd()">
+                            </div>
+
+                            <div class="form-group">
+                                <label>企业电话</label>
+                                <input id="companyTel" class="form-control spinner" type="text"
+                                       placeholder="请输入企业电话"/>
+                            </div>
+                            <div class="form-group">
+                                <label>企业邮箱</label>
+                                <input id="companyEmail" class="form-control spinner" type="text"
+                                       placeholder="请输入企业邮箱"/>
+                            </div>
+                            <div class="form-group">
+                                <label>企业地址</label>
+                                <input id="companyAdress" class="form-control spinner" type="text"
+                                       placeholder="请输入企业地址"/>
+                            </div>
+                            <div class="form-group">
+                                <label>企业联系人</label>
+                                <div>
+                                    <label>联系人1</label>
+                                    <div class="row">
+                                        <div class="col-md-2 contract-label">
+                                            姓名
+                                        </div>
+                                        <div class="col-md-3 contract-input">
+                                            <input id="contact1" type="text" class="form-control" placeholder="姓名">
+                                        </div>
+                                        <div class="col-md-2 contract-label">
+                                            电话
+                                        </div>
+                                        <div class="col-md-5">
+                                            <input id="tel1" type="text" class="form-control" placeholder="电话">
+                                        </div>
+
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2 contract-label">
+                                            微信
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input id="wechat1" type="text" class="form-control" placeholder="微信"></div>
+                                        <div class="col-md-2 contract-label">
+                                            邮箱
+                                        </div>
+                                        <div class="col-md-5">
+                                            <input id="email1" type="text" class="form-control" placeholder="邮箱"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label>联系人2</label>
+                                    <div class="row">
+                                        <div class="col-md-2 contract-label">
+                                            姓名
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input id="contact2" type="text" class="form-control" placeholder="姓名">
+                                        </div>
+                                        <div class="col-md-2 contract-label">
+                                            电话
+                                        </div>
+                                        <div class="col-md-5">
+                                            <input id="tel2" type="text" class="form-control" placeholder="电话"></div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-2 contract-label">
+                                            微信
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input id="wechat2" type="text" class="form-control" placeholder="微信"></div>
+                                        <div class="col-md-2 contract-label">
+                                            邮箱
+                                        </div>
+
+                                        <div class="col-md-5">
+                                            <input id="email2" type="text" class="form-control" placeholder="邮箱"></div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label>联系人3</label>
+                                    <div class="row">
+                                        <div class="col-md-2 contract-label">
+                                            姓名
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input id="contact3" type="text" class="form-control" placeholder="姓名">
+                                        </div>
+                                        <div class="col-md-2 contract-label">
+                                            电话
+                                        </div>
+                                        <div class="col-md-5">
+                                            <input id="tel3" type="text" class="form-control" placeholder="电话"></div>
+
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-md-2 contract-label">
+                                            微信
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input id="wechat3" type="text" class="form-control" placeholder="微信"></div>
+                                        <div class="col-md-2 contract-label">
+                                            邮箱
+                                        </div>
+                                        <div class="col-md-5">
+                                            <input id="email3" type="text" class="form-control" placeholder="邮箱"></div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="form-group">
+                                <label>公众号</label>
+                                <input id="companyAccounts" class="form-control spinner" type="text"
+                                       placeholder="请输入企业公众号"/>
+                            </div>
+
+
+                            <div class="form-group">
+                                <label>企业简介</label>
+                                <textarea id="companySummary" class="form-control" rows="3"
+                                          placeholder="请输入企业简介"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label>企业官网</label>
+                                <input id="companyWebUrl" class="form-control spinner" type="text"
+                                       placeholder="请输入企业官方网址"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label>企业规模</label><br>
+
+                                <select id="companyPersons" class="js-companyPersons-array" style="width: 100%;">
+                                    <option value="two" disabled="disabled">请选择所属行业领域</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>行业领域</label><br>
+
+                                <select id="companyField" class="js-company-field-array" style="width: 100%;">
+                                    <option value="two" disabled="disabled">请选择所属行业领域</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>企业工具</label><br>
+                            <select style="width:100%" id="companyTools" class="js-company-tool-array"
+                                    multiple="multiple">
+                                <option value="two" disabled="disabled">请选择企业工具</option>
+                            </select>
+
+                        </div>
+                        <div class="form-actions">
+                            <button onclick="savaCompanyInfo()" class="btn btn-danger" type="button"
+                                    style="font-size: 16px;padding: 5px 30px;margin-left: 50px;margin-right: 30px">保存
+                            </button>
+                            <button type="button" class="btn default " onclick="cancelEditCompanyInfo()"
+                                    style="font-size: 16px;padding: 5px 30px;">取消
+                            </button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+
+            <div class=" col-md-6 col-lg-6">
+                <div style="background-color:#fafafa" class="portlet light bordered col-md-12 col-lg-12">
+
+                    <div class="portlet-title">
+                        <div class="caption font-red-sunglo">
+                            <i class="icon-settings font-red-sunglo"></i>
+                            <span class="caption-subject bold uppercase">注册用户信息</span>
+                        </div>
+                    </div>
+                    <div class="portlet-body form">
+                        <form role="form">
+                            <div id="registerUser" uid="" class="form-body">
+                                <div class="form-group">
+                                    <label>注册手机</label>
+                                    <input id="registerMobile" class="form-control spinner"
+                                           type="text" placeholder="请输入注册手机"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>设置密码</label>
+                                    <input id="registerPwd" class="form-control spinner"
+                                           type="text" placeholder="密码未设置"/>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>用户邮箱</label>
+                                    <input id="registerEmail" class="form-control spinner" type="text"
+                                           placeholder="请输入您的邮箱"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>用户昵称</label>
+                                    <input id="registerNickName" class="form-control spinner" type="text"
+                                           placeholder="请输入昵称"/>
+                                </div>
+                                <div class="form-group">
+                                    <label>用户微信</label>
+                                    <input id="registerWechat" class="form-control spinner" type="text"
+                                           placeholder="微信未设置"/>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button type="button" class="btn btn-danger " onclick="saveCompanyRegisterUserInfo()"
+                                        style="font-size: 16px;padding: 5px 30px;margin-right: 30px">保存
+                                </button>
+                                <button type="button" class="btn default " onclick="gotoMainNav()"
+                                        style="font-size: 16px;padding: 5px 30px;">取消
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--营业执照-->
+            <div class="col-md-6 col-lg-6">
+                <div style="background-color:#fafafa" class="portlet light bordered col-md-12 col-lg-12">
+                    <div class="portlet-title">
+                        <div class="caption font-red-sunglo">
+                            <i class="icon-settings font-red-sunglo"></i>
+                            <span class="caption-subject bold uppercase">营业执照</span>
+                        </div>
+                    </div>
+
+                    <input id="companyfile" type="file" style="display: none" onchange="uploadCompanyFileSelect()">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input id="thirdUnionFlag" onclick="thirdUnionFlagClick()" type="checkbox"
+                                   style="margin-top: -5px; margin-right: 10px;margin-left: 10px"><span>三证合一</span>
+
+                        </div>
+                        <div class="col-md-2" style="text-align:left">
+                            <button class="btn btn-success"
+                                    style="height: 25px;line-height: 25px; font-size: 12px;padding: 0px 10px; text-align: center"
+                                    onclick="saveThirdUnionFlag()">保存
+                            </button>
+
+                        </div>
+                        <div id="companyfile-tips" class="col-md-4" style="text-align: right">
+                            提示:图片小于2M.
+                        </div>
+                        <div id="companyfile-hit" class="col-md-2"></div>
+
+                    </div>
+                    <table id="fileTable" class="table portlet light bordered table-striped"
+                           style="margin-top: 10px">
+                        <tbody>
+                        <!--<tr id="1" style="height: 35px">-->
+                        <!--<td onclick="showFileInfo(1)" style="cursor: pointer;color: blue">营业执照</td>-->
+                        <!--<td>已上传</td>-->
+                        <!--<td>上传 下载</td>-->
+                        <!--</tr>-->
+                        <!--<tr style="height: 35px">-->
+                        <!--<td>税务登记证</td>-->
+                        <!--<td>未上传</td>-->
+                        <!--<td>上传 下载</td>-->
+                        <!--</tr>-->
+                        <!--<tr style="height: 35px">-->
+                        <!--<td>组织机构代码</td>-->
+                        <!--<td>未上传</td>-->
+                        <!--<td>上传 下载</td>-->
+                        <!--</tr>-->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>

@@ -12,6 +12,9 @@ var common = require('./routes/common');
 var login = require('./routes/login');
 var home = require('./routes/home');
 
+var changePwd = require('./routes/changePwd');
+var companyManagement = require('./routes/companyManagement');
+
 var app = express();
 
 // view engine setup
@@ -42,7 +45,9 @@ app.use('/', index);
 app.use('/common', common);
 app.use('/login', login);
 app.use('/home', home);
+app.use('/changePwd', changePwd);
 
+app.use('/companyManagement',companyManagement);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

@@ -5,7 +5,7 @@ var home = require('../controllers/home');
 var auth = require('../common/auth');
 
 
-//router.get('/', auth.authUser, home.index);
-router.get('/', home.index);
+router.get('/', auth.authUser, home.index);
+//router.get('/', home.index);
 
 module.exports = router;

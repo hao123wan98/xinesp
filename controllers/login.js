@@ -26,7 +26,7 @@ exports.doLogin = function (req, res) {
     pwd = md5.md5(pwd);
     var contents = queryString.stringify({email: email, pwd: pwd});
 
-    httpRequest.post("/user/login", contents, req, res, function (data) {
+    httpRequest.post("/muser/login", contents, req, res, function (data) {
         if (data.code == '10000') {
             req.session.token = data.data.token;
             req.session.companyId = -1;
@@ -39,7 +39,7 @@ exports.doLogin = function (req, res) {
 };
 
 exports.doLogout = function (req, res, next) {
-    httpRequest.post('/user/logout', null, req, res, function (data) {
+    httpRequest.post('/muser/logout', null, req, res, function (data) {
         req.session.token = null;
         tokenFun.setToken(req.session.email, null);
         res.redirect('/login');

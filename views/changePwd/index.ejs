@@ -1,0 +1,71 @@
+<% include ../common/header %>
+<link rel="stylesheet" href="../../public/style/changePwd.css"/>
+<script src="/public/js/changePwd.js"></script>
+<div class="body">
+    <div class="changePwd ">
+        <table>
+            <tr>
+                <td>
+                <td class="title-h1"><h1><%= title %></h1></td>
+
+                </td>
+            </tr>
+            <tr>
+                <td class="title">邮箱:</td>
+                <td class="value">
+                    <%= email %>
+                </td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <td class="title">密码:</td>
+                <td class="value">
+                    ＊＊＊＊＊＊
+                </td>
+                <td>
+                    <button type="button" class="btn btn-primary" onclick="showPwdEdit()">修改密码</button>
+                </td>
+
+            </tr>
+        </table>
+        <table class="edit-changePwd-hide edit-changePwd">
+            <tr>
+                <td class="title">请输入原密码:</td>
+                <td class="value">
+                    <input id="oldPwd" type="password" placeholder="输入原密码">
+                    <div id="oldPwd-hint" class="hint"></div>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="title">请输入新密码:</td>
+                <td class="value">
+                    <input id="newPwd1" type="password" placeholder="输入新密码">
+                    <div id="newPwd1-hint" class="hint"></div>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="title">再次输入新密码:</td>
+                <td class="value">
+                    <input id="newPwd2" type="password" placeholder="再次输入新密码">
+                    <div id="newPwd2-hint" class="hint"></div>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td style="text-align: left;width: 150px;display: inline-block">
+                    <button type="button" class="btn btn-success" onclick="savePwd()"> 保 存</button>
+                </td>
+                <td style="text-align: left;width: 150px;display: inline-block">
+                    <button type="button" class="btn btn-default" onclick="hidePwdEdit()"> 取 消</button>
+                </td>
+
+            </tr>
+        </table>
+
+
+    </div>
+</div>

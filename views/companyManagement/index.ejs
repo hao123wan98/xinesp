@@ -1,0 +1,26 @@
+<% include ../common/header %>
+
+<!--内容-->
+<div class="body">
+    <!--<div class="row">-->
+    <!--<div class="col-md-2"><h4>新建企业</h4></div>-->
+    <!--</div>-->
+
+    <div class="sub-nav" id="sub-nav">
+        <a id="normal" href="#!nav/normal" class="sub-nav-item">正常企业</a>
+        <a id="waitReview" href="#!nav/waitReview" class="sub-nav-item">待审核</a>
+        <a id="reviewFailed" href="#!nav/reviewFailed" class="sub-nav-item">审核失败</a>
+    </div>
+
+
+    <div class="sub-body" id="sub-body">
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(zhenhr.view());
+</script>
+
+
+<% include ../common/footer %>

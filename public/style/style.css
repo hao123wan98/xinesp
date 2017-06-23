@@ -549,6 +549,14 @@ select:hover, textarea:hover, input:hover, select:focus, textarea:focus, input:f
     margin-top: -20px;
 }
 
+/*body 右边的功能按钮*/
+.body-right-button {
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 40px;
+}
+
 .button1 {
     display: inline-block;
     width: 114px;
@@ -705,7 +713,7 @@ tfoot td * {
 .prev-page-btn {
     width: 20px;
     height: 22px;
-    background: url(../../public/images/icon-11.png) no-repeat -17px -0px;
+    background: url(../../public/images/page_next.png) no-repeat -17px -0px;
     display: inline-block;
     margin-right: 10px;
 }
@@ -713,7 +721,7 @@ tfoot td * {
 .next-page-btn {
     width: 20px;
     height: 22px;
-    background: url(../../public/images/icon-11.png) no-repeat -33px -0px;
+    background: url(../../public/images/page_next.png) no-repeat -33px -0px;
     display: inline-block;
     margin-left: 10px;
 }
@@ -763,16 +771,6 @@ tfoot td * {
     margin-left: 3px;
 }
 
-.money {
-    background: url(../../public/images/money.png) no-repeat scroll 6% center;
-    padding: 0 0 0 20px !important;
-}
-
-.moneyBlock {
-    background: url(../../public/images/moneyBlock.png) no-repeat scroll 6% center;
-    padding: 8px 0 0 20px !important;
-}
-
 .showNav {
 }
 
@@ -812,10 +810,10 @@ tfoot td * {
     opcity: 0
 }
 
-.ios-overlay-hide,.hiddenbox{
+.ios-overlay-hide, .hiddenbox {
     display: none;
     visibility: hidden;
-    opcity:0
+    opcity: 0
 }
 
 .form-group .form-control.spinner {
@@ -1010,10 +1008,10 @@ input[type='text'], input[type='password'], input[type='text'], input[type='emai
     background-color: #fff;
 }
 
-
 .btn_cancel {
 
 }
-.label, .badge{
-    background-color: #fff!important;
+
+.label, .badge {
+    background-color: #fff !important;
 }

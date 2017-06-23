@@ -1,0 +1,5 @@
+
+$("newCompany").onclick()
+{
+
+}
