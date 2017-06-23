@@ -1,5 +1,1 @@
 
-$("newCompany").onclick()
-{
-
-}
