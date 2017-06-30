@@ -47,7 +47,7 @@ app.use('/login', login);
 app.use('/home', home);
 app.use('/changePwd', changePwd);
 
-app.use('/companyManagement',companyManagement);
+app.use('/companyManagement', companyManagement);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

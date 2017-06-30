@@ -20,7 +20,9 @@ router.get('/', companyManagement.index);
 router.get('/normal', companyManagement.showNormal);
 router.get('/waitReview', companyManagement.showWaitReview);
 router.get('/reviewFailed', companyManagement.showReviewFailed);
-
 router.get('/newCompany', companyManagement.showNewCompany);
+
+
+router.get('/list', companyManagement.list);
 
 module.exports = router;

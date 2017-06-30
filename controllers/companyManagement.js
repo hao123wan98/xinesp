@@ -32,10 +32,15 @@ exports.showNewCompany = function (req, res) {
 };
 
 
-exports.newInputInfoGet = function (req, res) {
-    var companyId = req.param('companyId');
-    var offerId = req.param('offerId');
-    httpRequest.get("/employee/entry/inputall/get?companyId=" + companyId + '&offerId=' + offerId, null, req, res, function (data) {
+/**
+ * 获取企业数据
+ * @param req
+ * @param res
+ */
+exports.list = function (req, res) {
+    var contents = queryString.stringify(req.body);
+    console.log(contents);
+    httpRequest.get("/mcompany/list?" + contents, null, req, res, function (data) {
         res.send(data);
     });
 };
